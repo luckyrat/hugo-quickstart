@@ -1,0 +1,12 @@
+# Global settings applied to the whole site.
+[build]
+  publish = "public"
+  command = "hugo"
+
+[context.deploy-preview]
+  command = "hugo --buildDrafts --buildFuture"
+  
+# Branch Deploy context: All deploys that are not in
+# an active Deploy Preview will inherit these settings.
+[context.branch-deploy]
+  command = "hugo --baseURL DEPLOY_PRIME_URL"
